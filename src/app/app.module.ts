@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ShowltPage } from '../pages/showlt/showlt'
+import { InfoStuPage } from '../pages/info-stu/info-stu'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +19,8 @@ import {HttpModule} from '@angular/http'
     MyApp,
     HomePage,
     ListPage,
-    ShowltPage
+    ShowltPage,
+    InfoStuPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import {HttpModule} from '@angular/http'
     MyApp,
     HomePage,
     ListPage,
-    ShowltPage
+    ShowltPage,
+    InfoStuPage
   ],
   providers: [
     StatusBar,

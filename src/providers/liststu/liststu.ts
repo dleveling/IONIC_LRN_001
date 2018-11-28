@@ -38,8 +38,21 @@ export class ListstuProvider {
                     .map((res:Response) => {return res.json()})
                     .catch(this.handleError);
     
-    }    /// SEND TYPE POST 
+  }    /// SEND TYPE POST 
+  
+  deleteStudentGet(studentID:String){
+    
+    return this.http.get("https://bayes.000webhostapp.com/deleteStudent.php?studentID="+studentID)
+                    .map((res:Response) => <Student[]> res.json())
+                    .catch(this.handleError);
+  }
 
+  updateStudentGet(studentID:String,studentName:String){
+  
+    return this.http.get("https://bayes.000webhostapp.com/updateStudent.php?studentID="+studentID+"&studentName="+studentName)
+                    .map((res:Response) => <Student[]> res.json())
+                    .catch(this.handleError);
+  }
 
   private handleError(error:any){
     return Observable.throw(error.json().errorMessage || "เกิดข้อผิดพลาด Server ");   

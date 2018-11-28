@@ -76,10 +76,10 @@ function insertStudent($id,$name){
    }
 }
 
-function updateStudent($id,$name,$id_old){
+function updateStudent($id,$name){
     try {
         $link = connectDB();
-        $query = "update tb_student set studentID='$id',studentName='$name' where studentID='$id_old'";
+        $query = "update tb_student set studentName='$name' where studentID='$id'";
         $result = mysqli_query( $link,$query );
         if($result)
             return json_encode(["Message" => "Update OK" ,"Status" => "Ok"]) ;       
@@ -97,7 +97,7 @@ function updateStudent($id,$name,$id_old){
 function deleteStudent($id){
     try {
         $link = connectDB();
-        $query = "delete tb_student where studentID='$id'";
+        $query = " delete from tb_student where studentID = '$id' ";
         $result = mysqli_query( $link,$query );
         if($result)
             return json_encode(["Message" => "Delete OK" ,"Status" => "Ok"]) ;       

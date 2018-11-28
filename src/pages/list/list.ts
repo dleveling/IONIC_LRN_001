@@ -34,4 +34,21 @@ export class ListPage {
       item: item
     });
   }
+
+  deleteRow(event,item){
+    console.log("Delete");    
+    //this.icons.pop();
+
+    let index = this.items.indexOf(item);
+
+    if(index > -1){
+      this.items.splice(index, 1);
+    }
+
+  }
+
+  moreRow(){
+    console.log("More");  
+  }
+
 }

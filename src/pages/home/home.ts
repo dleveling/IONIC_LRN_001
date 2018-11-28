@@ -22,7 +22,7 @@ export class HomePage {
 
   insertDataToHttp(){
     var resMsg2 = new resMsg("","");
-    this.sub = this.stuPro.insertStudentPost(this.val1,this.val2).subscribe(
+    this.sub = this.stuPro.insertStudentGet(this.val1,this.val2).subscribe(
       (res) => {
         resMsg2 = res;
         this.ShowAlert(resMsg2.Status,resMsg2.Message)
