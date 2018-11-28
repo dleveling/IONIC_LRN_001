@@ -8,11 +8,17 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-item>
+        <ion-label floating>Student ID</ion-label>
+        <ion-input type="text" [(ngModel)] = 'val1' ></ion-input>
+    </ion-item>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-item>
+        <ion-label floating>Student Name</ion-label>
+        <ion-input type="text" [(ngModel)] = 'val2' ></ion-input>
+    </ion-item>
+
+    <button ion-button full (click) ='insertDataToHttp();'> INSERT</button>
+
 </ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+        <ion-title>showlt</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let item of stuListDB" (click)='viewProfile(item.title,item.note)'>
+          
+          <div class="item-note" item-start>
+          {{item.studentID }}
+          </div>
+
+          <div class="item-note" item-end>
+            {{item.studentName}}
+          </div>
+        </button>
+      </ion-list>
+</ion-content>
